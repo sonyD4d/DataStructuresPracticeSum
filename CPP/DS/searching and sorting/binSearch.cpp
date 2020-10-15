@@ -3,7 +3,20 @@ using namespace std;
 
 int binarySearch(int *input, int n, int val)
 {
-    //Write your code here
+    int low=0,high=n,mid;
+    while(low<=high){
+        mid = (low+high)/2;
+        if(input[mid] == val){
+            return mid;
+        }
+        if(input[mid]>val){
+            high = mid-1;
+        }
+        else{
+            low=mid+1;
+        }
+    }
+    return -1;
 }
 int main()
 {
