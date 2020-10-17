@@ -4,6 +4,25 @@ using namespace std;
 
 void sortZeroesAndOne(int *input, int size)
 {
+	int zeroPos=0,onePos=size-1;
+	int i=0;
+	while (zeroPos<onePos)
+	{
+		if(!input[i]){
+			i++;
+			zeroPos++;
+		}
+		else{
+			input[i]=input[onePos];
+			input[onePos--]=1;
+		}
+	}
+	
+}
+
+/*
+void sortZeroesAndOne(int *input, int size)
+{
     for (size_t i = 0,j=size-1; i < size; i++)
     {
         if(input[i]==0||i>j){
@@ -18,7 +37,7 @@ void sortZeroesAndOne(int *input, int size)
     }
        
 }
-
+*/
 int main()
 {
 
