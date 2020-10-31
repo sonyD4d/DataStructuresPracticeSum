@@ -1,0 +1,28 @@
+Maximum product sub array:
+
+    compute max...
+
+    input: arr
+
+    output: max product
+
+approach:
+    
+    posP=1
+    negP=1
+    maxProduct=0
+
+    for():
+        if(ai == 0){
+            posP,negP=1,1
+        }
+        if(ai>0){
+            posP*=ai
+            negP=posP
+        }
+        if(ai<0){
+            negP*=ai
+            if(negP>0){posP=negP}
+        }
+        maxProduct=max(maxProduct,posP)
+    return maxProduct

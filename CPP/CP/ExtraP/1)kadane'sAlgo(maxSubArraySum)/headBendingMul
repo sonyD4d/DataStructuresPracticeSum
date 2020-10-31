@@ -1,0 +1,20 @@
+ai = multiplication of all other elemnets apart from ai
+
+eg: input:      2 4 5
+    output :    20 10 8
+
+approach:
+    product = ai*a(i+1)*...*a(n-1)
+    array = product/ai
+
+approach(without division,o(n)):
+    rightP = 20   5   1
+    leftP  = 1    2   8  //extra space
+    product = 20 10 8
+
+approach(o(1)): 
+    productArr = 20 5 1 //compute rproduct on output array
+    leftP = 1
+    for():
+        productArr[i]=leftP*productArr[i]
+        leftP*=arr[i]
