@@ -17,23 +17,24 @@ vector<int> longestConsecutiveIncreasingSequence(int *arr, int n){
             m[arr[i]]=false;
             int j=arr[i]+1;
             while(m[j]){
-                curEnd=m[j];
+                curEnd=j;
+                //cout<<j<<" ";
                 m[j]=false;
                 ++j;
                 curCount++;
             }
             j=arr[j]-1;
             while(m[j]){
-                curStart=m[j];
+                curStart=j;
                 m[j]=false;
                 --j;
                 curCount++;
             }
-            cout<<endl;
             if(curCount>maxCount){
                 maxCount=curCount;
                 maxStart=curStart;
                 maxEnd=curEnd;
+                //cout<<curEnd
             }
             curCount=0;
         }
@@ -41,7 +42,7 @@ vector<int> longestConsecutiveIncreasingSequence(int *arr, int n){
     vector<int> ans;
     ans.push_back(maxStart);
     ans.push_back(maxEnd);
-    cout<<maxStart<<" "<<maxEnd<<endl;
+    //cout<<maxStart<<" "<<maxEnd<<endl;
     return ans;
     
 }
