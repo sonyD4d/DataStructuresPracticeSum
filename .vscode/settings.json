@@ -1,10 +1,10 @@
 {
     "python.linting.pylintEnabled": true,
     "python.linting.enabled": true,
-    "python.dataScience.jupyterServerURI": "local",
     "files.associations": {
         "iostream": "cpp",
         "ostream": "cpp"
     },
-    "C_Cpp.errorSquiggles": "Disabled"
+    "C_Cpp.errorSquiggles": "Disabled",
+    "jupyter.jupyterServerType": "local"
 }
