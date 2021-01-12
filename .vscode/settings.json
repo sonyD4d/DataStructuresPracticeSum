@@ -6,5 +6,6 @@
         "ostream": "cpp"
     },
     "C_Cpp.errorSquiggles": "Disabled",
-    "jupyter.jupyterServerType": "local"
+    "jupyter.jupyterServerType": "local",
+    "python.pythonPath": "C:\\Users\\sonyd\\AppData\\Local\\Microsoft\\WindowsApps\\python.exe"
 }
